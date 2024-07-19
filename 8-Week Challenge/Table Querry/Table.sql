@@ -1,0 +1,57 @@
+CREATE SCHEMA DANNYS_DINNER;
+
+CREATE TABLE sales 
+(
+	CUSTOMER_ID VARCHAR(1),
+	ORDER_DATE DATE,
+	PRODUCT_ID INTEGER
+);
+
+INSERT INTO sales
+	(CUSTOMER_ID, ORDER_DATE, PRODUCT_ID)
+VALUES
+	("A",	"2021-01-01",	"1"),
+	("A",	"2021-01-01",	"2"),
+	("A",	"2021-01-07",	"2"),
+	("A",	"2021-01-10",	"3"),
+	("A",	"2021-01-11",	"3"),
+	("A",	"2021-01-11",	"3"),
+	("B",	"2021-01-01",	"2"),
+	("B",	"2021-01-02",	"2"),
+	("B",	"2021-01-04",	"1"),
+	("B",	"2021-01-11",	"1"),
+	("B",	"2021-01-16",	"3"),
+	("B",	"2021-02-01",	"3"),
+	("C",	"2021-01-01",	"3"),
+	("C",	"2021-01-01",	"3"),
+	("C",	"2021-01-07",	"3");
+
+SELECT * FROM MEMBERS;
+DROP TABLE MENU;
+
+CREATE TABLE MENU
+(
+	PRODUCT_ID VARCHAR(10),
+    PRODUCT_NAME VARCHAR(10),
+    PRICE INTEGER
+);
+
+INSERT INTO MENU
+	(PRODUCT_ID,PRODUCT_NAME,PRICE)
+VALUES
+	("1",	"sushi",	"10"),
+	("2",	"curry",	"15"),
+	("3",	"ramen",	"12");
+
+CREATE TABLE MEMBERS
+(
+	CUSTOMER_ID VARCHAR(1),
+    JOIN_DATE DATE
+);
+
+INSERT INTO MEMBERS
+	(CUSTOMER_ID, JOIN_DATE)
+VALUES
+	("A",	"2021-01-07"),
+	("B",	"2021-01-09");
+
